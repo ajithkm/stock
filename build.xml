@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!-- change 'projectName' to the application name; no spaces or special characters -->
+<!-- used for .bar file name and <RippleSites> subdirectory name -->
+<project default="build" basedir="." name="a">
+
+	<property name="anthome" value="C:/Users/Aji/ant_build_script/apache-ant-1.8.2" />
+
+	<!-- if true, copies the project assets to the ${RippleSites}/${ant.project.name} folder -->
+	<property name="do.ripple" value="false"/>
+
+	<!-- if false, remaining properties are ignored and no package is created -->
+	<property name="do.bb10" value="true" /> 
+
+	<!-- one or more of: debug,beta,release -->
+	<property name="bb10.package.types" value="debug" /> 
+
+	<!-- "false" skips device deployment
+		 "true" deploys the build specified in bb10.package.types if that value is a single item	 
+		 "debug" | "beta" | "release" as long as selected option is included in bb10.package.types	-->
+	<property name="bb10.deploy.device" value="false" /> 
+	
+	<!-- if true, packages and deploys a debug build to the simulator -->
+	<property name="bb10.deploy.sim" value="true" />
+
+	<!-- include the targets that do the actual work-->
+	<include file="${anthome}/../buildTasks.xml" />
+
+	<!-- then call the targets that do the job according to the properties you set above -->
+	<target name="build">
+		<!-- cleans, inits, copies src files and zips -->
+		<antcall target="buildTasks.package.preflight" />
+
+		<!-- packages zip and deploys to sim or device -->
+		<antcall target="buildTasks.doBuild" />
+	</target>
+
+</project>
