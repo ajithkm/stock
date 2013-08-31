@@ -2,7 +2,7 @@
 
 <!-- change 'projectName' to the application name; no spaces or special characters -->
 <!-- used for .bar file name and <RippleSites> subdirectory name -->
-<project default="build" basedir="." name="a">
+<project default="build" basedir="." name="stock">
 
 	<property name="anthome" value="C:/Users/Aji/ant_build_script/apache-ant-1.8.2" />
 

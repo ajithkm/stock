@@ -15,13 +15,12 @@
 * limitations under the License.
 -->
 <widget xmlns:rim="http://www.blackberry.com/ns/widgets" id="bbUISamples" version="0.9.1.25" rim:header="RIM-Widget:rim/widget" xmlns="http://www.w3.org/ns/widgets">
-  <name>a</name>
+  <name>Market Eye</name>
   <description>An example of how to use different BlackBerry UI layouts and controls</description>
   <author href="https://github.com/tneil">Saso</author>
   <icon src="images\icon.png" />
   <icon src="images\icon.png" rim:hover="true" />
-  <rim:splash src="images\bb10-splash-landscape.png" />
-  <rim:splash src="images\bb10-splash-portrait.png" />
+  <rim:splash src="images\splash.png" />
   <content src="index.html" />
   <feature id="blackberry.ui.menu" />
   <feature id="blackberry.ui.dialog"/>
@@ -30,4 +29,5 @@
   <feature id="blackberry.app" />
   <feature id="blackberry.app.event"/>
   <feature id="blackberry.ui.contextmenu"/>
+  <access uri="http://rate-exchange.appspot.com/" subdomain="true"></access>
 </widget>
