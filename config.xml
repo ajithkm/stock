@@ -30,4 +30,5 @@
   <feature id="blackberry.app.event"/>
   <feature id="blackberry.ui.contextmenu"/>
   <access uri="http://rate-exchange.appspot.com/" subdomain="true"></access>
+  <access uri="http://www.google.com/" subdomain="true"></access>
 </widget>
